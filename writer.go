@@ -1,4 +1,4 @@
-package gologger
+package simplelogger
 
 import "fmt"
 
