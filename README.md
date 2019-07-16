@@ -1,5 +1,6 @@
 # Go Simple Logger
 
+[![CircleCI](https://circleci.com/gh/forsam-education/hermes.svg?style=svg)](https://circleci.com/gh/forsam-education/simplelogger)
 [![GoDoc](https://godoc.org/github.com/forsam-education/simplelogger?status.svg)](https://godoc.org/github.com/forsam-education/simplelogger)
 [![Go Report Card](https://goreportcard.com/badge/github.com/forsam-education/simplelogger)](https://goreportcard.com/report/github.com/forsam-education/simplelogger)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
