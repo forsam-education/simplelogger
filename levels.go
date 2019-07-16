@@ -1,18 +1,17 @@
 package simplelogger
 
-
 // LogLevel represents a... log level
 type LogLevel string
 
 const (
 	// DEBUG log level
-	DEBUG    LogLevel = "DEBUG"
+	DEBUG LogLevel = "DEBUG"
 	// INFO log level
-	INFO     LogLevel = "INFO"
+	INFO LogLevel = "INFO"
 	// WARN log level
-	WARN     LogLevel = "WARN"
+	WARN LogLevel = "WARN"
 	// ERROR log level
-	ERROR    LogLevel = "ERROR"
+	ERROR LogLevel = "ERROR"
 	// CRITICAL log level
 	CRITICAL LogLevel = "CRITICAL"
 )
