@@ -8,14 +8,19 @@ import (
 type Logger struct {
 	formatter Formatter
 	writer    Writer
+	MinLevel  LogLevel
 }
 
 // NewDefaultLogger returns a standard logger to StdOut using the default formatter.
 func NewDefaultLogger() Logger {
-	return Logger{DefaultFormatter{}, DefaultWriter{}}
+	return Logger{DefaultFormatter{}, DefaultWriter{}, DEBUG}
 }
 
 func (logger Logger) log(level LogLevel, message string, data map[string]interface{}) {
+	if level < logger.MinLevel {
+		return
+	}
+
 	formattedMessage, err := logger.formatter.Format(level, message, data)
 
 	if err != nil {

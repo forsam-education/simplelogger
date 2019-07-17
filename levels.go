@@ -1,17 +1,21 @@
 package simplelogger
 
 // LogLevel represents a... log level
-type LogLevel string
+type LogLevel uint
 
 const (
 	// DEBUG log level
-	DEBUG LogLevel = "DEBUG"
+	DEBUG LogLevel = iota
 	// INFO log level
-	INFO LogLevel = "INFO"
+	INFO LogLevel = iota
 	// WARN log level
-	WARN LogLevel = "WARN"
+	WARN LogLevel = iota
 	// ERROR log level
-	ERROR LogLevel = "ERROR"
+	ERROR LogLevel = iota
 	// CRITICAL log level
-	CRITICAL LogLevel = "CRITICAL"
+	CRITICAL LogLevel = iota
 )
+
+func (l LogLevel) String() string {
+	return [...]string{"DEBUG", "INFO", "WARN", "ERROR", "CRITICAL"}[l]
+}
