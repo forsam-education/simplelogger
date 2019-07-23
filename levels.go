@@ -1,18 +1,18 @@
 package simplelogger
 
-// LogLevel represents a... log level
+// LogLevel represents a... Log level
 type LogLevel uint
 
 const (
-	// DEBUG log level
+	// DEBUG Log level
 	DEBUG LogLevel = iota
-	// INFO log level
+	// INFO Log level
 	INFO LogLevel = iota
-	// WARN log level
+	// WARN Log level
 	WARN LogLevel = iota
-	// ERROR log level
+	// ERROR Log level
 	ERROR LogLevel = iota
-	// CRITICAL log level
+	// CRITICAL Log level
 	CRITICAL LogLevel = iota
 )
 
