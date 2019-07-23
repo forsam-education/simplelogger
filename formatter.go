@@ -13,7 +13,7 @@ type Formatter interface {
 // LogExtraData is the basic structure to pass extra data to a Log.
 type LogExtraData map[string]interface{}
 
-// DefaultFormatter is the formatter for the DefaultLogger.
+// DefaultFormatter is the Formatter for the DefaultLogger.
 type DefaultFormatter struct{}
 
 // Format returns the Log with the date in RFC3339 format, loglevel, message and extra data as a string.

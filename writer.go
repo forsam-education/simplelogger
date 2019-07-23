@@ -7,7 +7,7 @@ type Writer interface {
 	Write(message string) error
 }
 
-// DefaultWriter is the writer for the DefaultLogger.
+// DefaultWriter is the Writer for the DefaultLogger.
 type DefaultWriter struct{}
 
 // Write displays the formatted Log message to the standard output.

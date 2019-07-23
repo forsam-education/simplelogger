@@ -6,14 +6,14 @@ import (
 
 // Logger is the basic struct of a logger.
 type Logger struct {
-	formatter Formatter
-	writer    Writer
+	Formatter Formatter
+	Writer    Writer
 	MinLevel  LogLevel
 }
 
-// NewDefaultLogger returns a standard logger to StdOut using the default formatter.
-func NewDefaultLogger() Logger {
-	return Logger{DefaultFormatter{}, DefaultWriter{}, DEBUG}
+// NewDefaultLogger returns a standard logger to StdOut using the default Formatter.
+func NewDefaultLogger(minLevel LogLevel) Logger {
+	return Logger{DefaultFormatter{}, DefaultWriter{}, minLevel}
 }
 
 // Log function is the base function where you have to explicitely specify the LogLevel.
@@ -22,16 +22,16 @@ func (logger Logger) Log(level LogLevel, message string, data LogExtraData) {
 		return
 	}
 
-	formattedMessage, err := logger.formatter.Format(level, message, data)
+	formattedMessage, err := logger.Formatter.Format(level, message, data)
 
 	if err != nil {
-		fmt.Printf("error while calling Log formatter: %s", err.Error())
+		fmt.Printf("error while calling Log Formatter: %s", err.Error())
 		return
 	}
 
-	err = logger.writer.Write(formattedMessage)
+	err = logger.Writer.Write(formattedMessage)
 	if err != nil {
-		fmt.Printf("error while calling Log writer: %s", err.Error())
+		fmt.Printf("error while calling Log Writer: %s", err.Error())
 	}
 }
 
