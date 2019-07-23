@@ -16,6 +16,7 @@ func NewDefaultLogger() Logger {
 	return Logger{DefaultFormatter{}, DefaultWriter{}, DEBUG}
 }
 
+// Log function is the base function where you have to explicitely specify the LogLevel.
 func (logger Logger) Log(level LogLevel, message string, data LogExtraData) {
 	if level < logger.MinLevel {
 		return
