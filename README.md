@@ -4,6 +4,7 @@
 [![GoDoc](https://godoc.org/github.com/forsam-education/simplelogger?status.svg)](https://godoc.org/github.com/forsam-education/simplelogger)
 [![Go Report Card](https://goreportcard.com/badge/github.com/forsam-education/simplelogger)](https://goreportcard.com/report/github.com/forsam-education/simplelogger)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fforsam-education%2Fsimplelogger.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fforsam-education%2Fsimplelogger?ref=badge_shield)
 
 ## Background
 
@@ -64,3 +65,6 @@ This is of course not an exhaustive list but here are some logger you may want t
 
 - [apsdehal/go-logger](https://github.com/apsdehal/go-logger)
 - [azer/logger](https://github.com/azer/logger)
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fforsam-education%2Fsimplelogger.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fforsam-education%2Fsimplelogger?ref=badge_large)
