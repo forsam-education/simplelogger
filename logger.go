@@ -11,6 +11,9 @@ type Logger struct {
 	MinLevel  LogLevel
 }
 
+// GlobalLogger is a place to store a logger ans use it across packages.
+var GlobalLogger Logger
+
 // NewDefaultLogger returns a standard logger to StdOut using the default Formatter.
 func NewDefaultLogger(minLevel LogLevel) Logger {
 	return Logger{DefaultFormatter{}, DefaultWriter{}, minLevel}
