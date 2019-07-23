@@ -25,7 +25,7 @@ func (logger Logger) Log(level LogLevel, message string, data LogExtraData) {
 	formattedMessage, err := logger.Formatter.Format(level, message, data)
 
 	if err != nil {
-		fmt.Printf("error while calling Log Formatter: %s", err.Error())
+		fmt.Printf("error while calling Log formatter: %s", err.Error())
 		return
 	}
 
