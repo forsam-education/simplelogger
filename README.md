@@ -18,19 +18,23 @@ This package exports a Logger struct defined like this (you'll find an interface
 ```go
 package simplelogger
 
+type LogExtraData map[string]interface{}
+
 type Logger struct {
 	formatter Formatter
 	writer    Writer
+	MinLevel  LogLevel
 }
 
 type _ interface {
-	log(level LogLevel, message string, data map[string]interface{})
-	Debug(message string, data map[string]interface{})
-	Info(message string, data map[string]interface{})
-	Warn(message string, data map[string]interface{})
-	Error(message string, data map[string]interface{})
-	Critical(message string, data map[string]interface{})
-	StdError(err error, data map[string]interface{})
+	Log(level LogLevel, message string, data LogExtraData)
+	Debug(message string, data LogExtraData)
+	Info(message string, data LogExtraData)
+	Warn(message string, data LogExtraData)
+	Error(message string, data LogExtraData)
+	Critical(message string, data LogExtraData)
+	StdErrorCritical(err error, data LogExtraData)
+	StdError(err error, data LogExtraData)
 }
 ```
 
