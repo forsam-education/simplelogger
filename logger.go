@@ -63,6 +63,11 @@ func (logger Logger) Critical(message string, data LogExtraData) {
 	logger.Log(CRITICAL, message, data)
 }
 
+// StdErrorCritical handles logging of messages with the level Critical with objects of type 'error'.
+func (logger Logger) StdErrorCritical(err error, data LogExtraData) {
+	logger.Log(CRITICAL, err.Error(), data)
+}
+
 // StdError handles logging objects of type 'error'.
 func (logger Logger) StdError(err error, data LogExtraData) {
 	logger.Log(ERROR, err.Error(), data)
